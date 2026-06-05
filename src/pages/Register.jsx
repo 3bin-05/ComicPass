@@ -17,8 +17,8 @@ export default function Register() {
   const { user, setUser } = useAuthStore();
 
   useSEO({
-    title: "ComicPass — Enroll Hero",
-    description: "Create a new ComicPass account and set up client-side zero-knowledge password encryption."
+    title: "Password Undo — Enroll Hero",
+    description: "Create a new Password Undo account and set up client-side zero-knowledge password encryption."
   });
 
   useEffect(() => {
@@ -75,7 +75,7 @@ export default function Register() {
 
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] bg-halftone py-16 px-6 flex justify-center items-center">
-      <h1 className="sr-only">ComicPass New Account Registration</h1>
+      <h1 className="sr-only">Password Undo New Account Registration</h1>
       <div className="w-full max-w-md">
         <ComicCard title="NEW RECRUIT!" className="relative">
           <h2 className="font-bangers text-3xl tracking-widest text-center uppercase mb-6 select-none">
@@ -100,7 +100,7 @@ export default function Register() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="border-3 border-[var(--border)] bg-[var(--bg-primary)] text-[var(--text-primary)] px-4 py-2.5 font-mono text-sm outline-none shadow-[2px_2px_0px_var(--shadow)] focus:translate-x-[1px] focus:translate-y-[1px] focus:shadow-[1px_1px_0px_var(--shadow)] transition-all"
-                placeholder="superhero@comicpass.com"
+                placeholder="superhero@passwordundo.com"
               />
             </div>
 

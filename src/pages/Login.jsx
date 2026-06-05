@@ -16,8 +16,8 @@ export default function Login() {
   const { user, setUser } = useAuthStore();
 
   useSEO({
-    title: "ComicPass — Portal Login",
-    description: "Unlock your ComicPass password vault and access your encrypted credentials core secure and anonymous."
+    title: "Password Undo — Portal Login",
+    description: "Unlock your Password Undo password vault and access your encrypted credentials core secure and anonymous."
   });
 
   // If already logged in, redirect to vault
@@ -70,7 +70,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] bg-halftone py-16 px-6 flex justify-center items-center">
-      <h1 className="sr-only">Sign In to ComicPass Password Vault</h1>
+      <h1 className="sr-only">Sign In to Password Undo Password Vault</h1>
       
       <div className="w-full max-w-md">
         <ComicCard title="IDENTIFY USER!" className="relative">
@@ -96,7 +96,7 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="border-3 border-[var(--border)] bg-[var(--bg-primary)] text-[var(--text-primary)] px-4 py-2.5 font-mono text-sm outline-none shadow-[2px_2px_0px_var(--shadow)] focus:translate-x-[1px] focus:translate-y-[1px] focus:shadow-[1px_1px_0px_var(--shadow)] transition-all"
-                placeholder="superhero@comicpass.com"
+                placeholder="superhero@passwordundo.com"
               />
             </div>
 

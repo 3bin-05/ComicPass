@@ -16,7 +16,7 @@ export default function Vault() {
   const { user, derivedKey, vaultUnlocked, hasMasterPassword, setupMasterPassword, unlockVault } = useAuthStore();
 
   useSEO({
-    title: "ComicPass — Vault Core",
+    title: "Password Undo — Vault Core",
     description: "Securely manage, edit, and decrypt your password archives client-side using local AES-256 keys."
   });
 

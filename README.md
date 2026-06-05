@@ -1,4 +1,4 @@
-# ⚡ ComicPass — Impenetrable Password Vault
+# ⚡ Password Undo — Impenetrable Password Vault
 
 > **"Generate. Encrypt. Store. Protect."**
 > A zero-knowledge client-side encrypted password manager built with a monochrome comic-book aesthetic.
@@ -7,7 +7,7 @@
 
 ## 📌 Project Overview
 
-ComicPass is a full-stack password generator, vault, and security audit dashboard. The entire application is built around the principle of **zero-knowledge privacy**—your master password and plaintext keys never leave your browser under any circumstance. 
+Password Undo is a full-stack password generator, vault, and security audit dashboard. The entire application is built around the principle of **zero-knowledge privacy**—your master password and plaintext keys never leave your browser under any circumstance. 
 
 All of this security is wrapped in a high-fidelity monochrome comic-book style design featuring heavy borders, hard-offset box shadows, spring-physics micro-interactions, and retro action-word popups (*POW!*, *BAM!*, *ZAP!*).
 
@@ -42,7 +42,7 @@ When saving a password to the database:
 - The ciphertext (Base64) and the IV (Hex) are stored together in Firestore. Reusing keys with unique IVs prevents ciphertext pattern analysis.
 
 ### 3. Password Verification (Zero-Knowledge)
-To check if the entered master password is correct without storing it, ComicPass generates an encrypted verifier string `"ComicPass Access Granted"` using the derived key upon master password setup. 
+To check if the entered master password is correct without storing it, Password Undo generates an encrypted verifier string `"Password Undo Access Granted"` (with fallback support for "ComicPass Access Granted") using the derived key upon master password setup. 
 On subsequent unlocks, the app derives the key from the entered password, attempts to decrypt this verifier, and checks if it matches.
 
 ### 4. Have I Been Pwned checks (k-Anonymity)
@@ -50,14 +50,14 @@ When checking if a password is leaked:
 1. The password is hashed using SHA-1 locally.
 2. Only the first **5 hex characters** of the hash are sent to the HIBP API.
 3. The API returns a list of matching suffix hashes and leak counts.
-4. ComicPass checks the returned list locally for the remaining 35 characters. Your plaintext password or full hash never leaves the device.
+4. Password Undo checks the returned list locally for the remaining 35 characters. Your plaintext password or full hash never leaves the device.
 
 ---
 
 ## 🗂 Folder Structure
 
 ```
-comicpass/
+password-undo/
 ├── firebase.json             # Firebase configuration
 ├── firestore.rules           # Security rules for Firestore
 ├── index.html                # Entry HTML template (optimized SEO tags)
@@ -109,8 +109,8 @@ comicpass/
 
 ### Step 1: Clone and Install
 ```bash
-git clone https://github.com/yourusername/comicpass.git
-cd comicpass
+git clone https://github.com/yourusername/password-undo.git
+cd password-undo
 npm install
 ```
 

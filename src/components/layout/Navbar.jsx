@@ -25,7 +25,7 @@ export default function Navbar() {
       {/* Brand Logo */}
       <Link to="/" className="flex items-center gap-2 select-none group">
         <span className="font-bangers text-3xl tracking-widest text-[var(--text-primary)] transition-transform group-hover:scale-105">
-          COMIC<span className="text-red-500 dark:text-red-400">PASS</span>
+          PASSWORD<span className="text-red-500 dark:text-red-400">UNDO</span>
         </span>
         <div className="hidden sm:block font-marker text-xs border border-[var(--border)] px-1.5 py-0.5 rounded-md rotate-[-2deg] bg-[var(--bg-elevated)] shadow-[1px_1px_0px_var(--shadow)]">
           ISSUE #1

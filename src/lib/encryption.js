@@ -63,7 +63,7 @@ export function decryptPassword(ciphertext, ivHex, derivedKeyHex) {
  * Generates verification data for a new Master Password.
  * Encrypts a known verification phrase with the derived key.
  */
-export const VERIFICATION_PHRASE = "ComicPass Access Granted";
+export const VERIFICATION_PHRASE = "Password Undo Access Granted";
 
 export function generateVerifier(derivedKeyHex) {
   return encryptPassword(VERIFICATION_PHRASE, derivedKeyHex);
@@ -74,5 +74,5 @@ export function generateVerifier(derivedKeyHex) {
  */
 export function verifyMasterPassword(verifierCiphertext, verifierIvHex, derivedKeyHex) {
   const decrypted = decryptPassword(verifierCiphertext, verifierIvHex, derivedKeyHex);
-  return decrypted === VERIFICATION_PHRASE;
+  return decrypted === VERIFICATION_PHRASE || decrypted === "ComicPass Access Granted";
 }

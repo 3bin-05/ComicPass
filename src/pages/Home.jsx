@@ -13,7 +13,7 @@ export default function Home() {
   const { user } = useAuthStore();
 
   useSEO({
-    title: "ComicPass — Impenetrable Password Vault",
+    title: "Password Undo — Impenetrable Password Vault",
     description: "Monochrome, zero-knowledge client-side encrypted password generator and vault inspired by monochrome comic panels."
   });
 
@@ -184,7 +184,7 @@ export default function Home() {
         
         <div className="flex flex-col md:flex-row gap-8 items-center w-full">
           <SpeechBubble tailPosition="left" className="flex-1 border-3 border-[var(--border)]">
-            "ComicPass is absolute genius. I derived a 256-bit key from my Master Password and my vault remains entirely impenetrable, even on Firestore. And the button slam-down click? Highly satisfying!"
+            "Password Undo is absolute genius. I derived a 256-bit key from my Master Password and my vault remains entirely impenetrable, even on Firestore. And the button slam-down click? Highly satisfying!"
             <div className="text-right text-xs font-mono text-[var(--text-muted)] mt-2">— EBIN, VAULT SECURITY OFFICER</div>
           </SpeechBubble>
           

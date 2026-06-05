@@ -17,7 +17,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   useSEO({
-    title: "ComicPass — Security Audit",
+    title: "Password Undo — Security Audit",
     description: "Audit your password vault health score, flag duplicates, and check for HIBP credentials breaches."
   });
 

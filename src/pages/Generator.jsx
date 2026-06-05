@@ -33,7 +33,7 @@ export default function Generator() {
   const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
 
   useSEO({
-    title: "ComicPass — Password Generator",
+    title: "Password Undo — Password Generator",
     description: "Generate strong, custom, high-entropy cryptographic passwords locally with live HIBP breach scans."
   });
 

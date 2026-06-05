@@ -266,7 +266,7 @@ export default function AddCredentialModal({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="border-3 border-[var(--border)] bg-[var(--bg-primary)] text-[var(--text-primary)] px-4 py-2 font-mono text-sm outline-none shadow-[2px_2px_0px_var(--shadow)] focus:translate-x-[1px] focus:translate-y-[1px] focus:shadow-[1px_1px_0px_var(--shadow)]"
-                  placeholder="superhero@comicpass.com"
+                  placeholder="superhero@passwordundo.com"
                 />
               </div>
 

@@ -6,10 +6,10 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="font-bangers text-2xl tracking-widest text-[var(--text-primary)]">
-            COMIC<span className="text-red-500 dark:text-red-400">PASS</span>
+            PASSWORD<span className="text-red-500 dark:text-red-400">UNDO</span>
           </div>
           <p className="text-xs font-mono text-[var(--text-muted)] mt-1">
-            © {new Date().getFullYear()} COMICPASS INC. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} PASSWORD UNDO INC. ALL RIGHTS RESERVED.
           </p>
         </div>
 
