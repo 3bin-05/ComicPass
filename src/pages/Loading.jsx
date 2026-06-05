@@ -132,13 +132,13 @@ export default function Loading({ onComplete }) {
               className="flex flex-col items-center"
             >
               {/* ACCESS GRANTED STAGGER */}
-              <div className="flex flex-wrap justify-center gap-1 sm:gap-2 select-none">
+              <div className="flex flex-nowrap justify-center gap-1 sm:gap-2 select-none whitespace-nowrap">
                 {words.map((char, index) => (
                   <motion.span
                     key={index}
                     variants={letterVariants}
-                    className={`font-bangers text-5xl sm:text-7xl tracking-tighter px-1
-                      ${char === " " ? "w-8" : "border-3 border-white bg-red-600 text-white shadow-[4px_4px_0px_white]"}
+                    className={`font-bangers text-3xl sm:text-6xl md:text-7xl tracking-tighter px-1.5 py-0.5
+                      ${char === " " ? "w-4 sm:w-8" : "border-2 sm:border-3 border-white bg-red-600 text-white shadow-[2px_2px_0px_white] sm:shadow-[4px_4px_0px_white]"}
                       transform ${index % 2 === 0 ? "rotate-[-3deg]" : "rotate-[3deg]"}`}
                   >
                     {char}
