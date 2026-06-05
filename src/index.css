@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #FFFFFF;
+    --bg-card: #F5F5F5;
+    --bg-elevated: #EBEBEB;
+    --text-primary: #000000;
+    --text-muted: #555555;
+    --border: #000000;
+    --shadow: #000000;
+    --halftone-color: rgba(0, 0, 0, 0.06);
+    --accent-red: #000000;
+    --accent-red-bg: #FFFFFF;
+  }
+
+  :root.dark {
+    --bg-primary: #000000;
+    --bg-card: #111111;
+    --bg-elevated: #1A1A1A;
+    --text-primary: #FFFFFF;
+    --text-muted: #999999;
+    --border: #FFFFFF;
+    --shadow: #FFFFFF;
+    --halftone-color: rgba(255, 255, 255, 0.06);
+    --accent-red: #FFFFFF;
+    --accent-red-bg: #000000;
+  }
+
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300 overflow-x-hidden;
+    font-family: 'Space Mono', monospace;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Custom Comic CSS Patterns */
+.bg-halftone {
+  background-image: radial-gradient(var(--halftone-color) 15%, transparent 16%),
+                    radial-gradient(var(--halftone-color) 15%, transparent 16%);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+/* Speed Lines Background (Comic Hero Panel) */
+.speed-lines {
+  background: 
+    linear-gradient(90deg, var(--bg-primary) 50%, transparent 50%),
+    linear-gradient(var(--halftone-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--halftone-color) 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px, 20px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.speed-lines::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: radial-gradient(circle, transparent 30%, var(--bg-primary) 70%);
+  pointer-events: none;
+}
+
+/* Hard Custom Comic Shadow Elements */
+.comic-border {
+  border: 3px solid var(--border);
+}
+
+.comic-shadow {
+  box-shadow: 6px 6px 0px var(--shadow);
+}
+
+.comic-card-hover {
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.comic-card-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px var(--shadow);
+}
+
+/* Comic Speech Bubble Arrow Tail CSS */
+.speech-bubble-tail-left::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 24px;
+  border-width: 15px 15px 0 0;
+  border-style: solid;
+  border-color: var(--border) transparent transparent transparent;
+  display: block;
+  width: 0;
+}
+
+.speech-bubble-tail-left::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 26px;
+  border-width: 12px 12px 0 0;
+  border-style: solid;
+  border-color: var(--bg-card) transparent transparent transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+}
+
+.speech-bubble-tail-right::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: 24px;
+  border-width: 15px 0 0 15px;
+  border-style: solid;
+  border-color: var(--border) transparent transparent transparent;
+  display: block;
+  width: 0;
+}
+
+.speech-bubble-tail-right::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 26px;
+  border-width: 12px 0 0 12px;
+  border-style: solid;
+  border-color: var(--bg-card) transparent transparent transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+}
+
+/* Custom Comic Keyframe Animations */
+@keyframes comic-shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-6px); }
+  20%, 40%, 60%, 80% { transform: translateX(6px); }
+}
+
+.animate-comic-shake {
+  animation: comic-shake 0.5s ease-in-out;
+}
+
+@keyframes border-flash-red {
+  0%, 100% { border-color: var(--border); box-shadow: 6px 6px 0px var(--shadow); }
+  50% { border-color: #ef4444; box-shadow: 6px 6px 0px #ef4444; }
+}
+
+.animate-border-flash-red {
+  animation: border-flash-red 0.5s ease-in-out 2;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar styled comic-book style */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-left: 3px solid var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-primary);
+  border: 3px solid var(--bg-primary);
+}
