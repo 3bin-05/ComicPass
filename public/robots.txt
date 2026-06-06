@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /generator
+Allow: /intelligence
+Allow: /login
+Allow: /register
+Disallow: /vault
+Disallow: /dashboard
+
+Sitemap: https://passwordundo.com/sitemap.xml
