@@ -8,4 +8,4 @@ Allow: /register
 Disallow: /vault
 Disallow: /dashboard
 
-Sitemap: https://passwordundo.com/sitemap.xml
+Sitemap: https://password-undo.vercel.app/sitemap.xml
