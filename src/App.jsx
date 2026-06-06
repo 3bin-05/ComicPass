@@ -13,6 +13,8 @@ import Generator from "./pages/Generator";
 import Vault from "./pages/Vault";
 import Dashboard from "./pages/Dashboard";
 
+import Intelligence from "./pages/Intelligence";
+
 // Layout
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -110,6 +112,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/generator" element={<Generator />} />
+          <Route path="/intelligence" element={<Intelligence />} />
           
           <Route
             path="/vault"

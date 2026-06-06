@@ -37,6 +37,9 @@ export default function Navbar() {
         <NavLink to="/generator" className={linkClass}>
           Generator
         </NavLink>
+        <NavLink to="/intelligence" className={linkClass}>
+          Intel Center
+        </NavLink>
         
         {user && (
           <>
@@ -111,6 +114,9 @@ export default function Navbar() {
         <div className="absolute top-[75px] left-0 right-0 z-50 bg-[var(--bg-primary)] border-b-3 border-[var(--border)] flex flex-col p-6 gap-4 shadow-[0_10px_20px_rgba(0,0,0,0.15)] md:hidden">
           <NavLink to="/generator" onClick={() => setIsOpen(false)} className={linkClass}>
             Generator
+          </NavLink>
+          <NavLink to="/intelligence" onClick={() => setIsOpen(false)} className={linkClass}>
+            Intel Center
           </NavLink>
           {user && (
             <>
